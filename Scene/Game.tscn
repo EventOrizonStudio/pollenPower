@@ -27,6 +27,7 @@ position = Vector2( 517.133, 0.902496 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
 position = Vector2( -6.3175, 629.945 )
 shape = SubResource( 1 )
+
 [connection signal="grab_pollen" from="Nabeille" to="." method="onGrabPollen"]
 [connection signal="pollen_consumption" from="Nabeille" to="." method="onPollenConsumption"]
 [connection signal="area_entered" from="DeathZone" to="." method="_on_DeathZone_area_entered"]
