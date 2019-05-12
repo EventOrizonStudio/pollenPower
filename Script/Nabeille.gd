@@ -18,7 +18,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed("ui_select") && canJump:
-		vel.y -= jumpSpeed
+		if canJump : vel.y -= jumpSpeed
 		vel.y = clamp(vel.y,-maxVel,maxVel)
 		emit_signal("pollen_consumption")
 	vel.y += gravityIntensity * delta
