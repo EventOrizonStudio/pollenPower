@@ -1,6 +1,6 @@
 extends Node2D
 
-export(PackedScene) var pollen_scene = preload("Pollen.tscn")
+export(PackedScene) var pollen_scene = preload("res://Scene/Pollen.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()

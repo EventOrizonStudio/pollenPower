@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Area2D",
 "class": "Pollen",
 "language": "GDScript",
-"path": "res://Scene/Pollen.gd"
+"path": "res://Script/Pollen.gd"
 } ]
 _global_script_class_icons={
 "Pollen": ""

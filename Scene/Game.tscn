@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scene/Game.gd" type="Script" id=1]
+[ext_resource path="res://Script/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Guy.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/PollenPop.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/Nabeille.tscn" type="PackedScene" id=4]
