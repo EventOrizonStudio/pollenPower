@@ -6,6 +6,7 @@ export(int, 0, 10) var jumpSpeed = 10
 export(int, 0, 10) var maxVel = 5
 
 onready var vel = Vector2()
+var canJump = true
 
 signal pollen_consumption
 signal grab_pollen
@@ -16,7 +17,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("ui_select"):
+	if Input.is_action_just_pressed("ui_select") && canJump:
 		vel.y -= jumpSpeed
 		vel.y = clamp(vel.y,-maxVel,maxVel)
 		emit_signal("pollen_consumption")
@@ -31,3 +32,6 @@ func _on_Nabeille_area_entered(area):
 	if area is Pollen:
 		area.queue_free()
 		emit_signal("grab_pollen")
+		
+func noPollen(value):
+	canJump = value
