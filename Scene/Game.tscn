@@ -1,15 +1,19 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Scene/PollenPop.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scene/Nabeille.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scene/Guy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Script/Nabeille.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
 
 [node name="Game" type="Node"]
 
-[node name="PollenPop" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1022, 2 )
+[node name="Nabeille" type="Area2D" parent="."]
+script = ExtResource( 1 )
+gravityIntensity = 7
 
-[node name="Nabeille" parent="." instance=ExtResource( 2 )]
+[node name="Sprite" type="Sprite" parent="Nabeille"]
+texture = ExtResource( 2 )
 
-[node name="Guy" parent="Nabeille" instance=ExtResource( 3 )]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nabeille"]
+shape = SubResource( 1 )
 
