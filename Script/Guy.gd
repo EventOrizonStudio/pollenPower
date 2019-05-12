@@ -10,6 +10,9 @@ func _ready():
 
 func setPoint(i:int):
 	$CenterContainer2/Label2.text = str(i)
+
+func setMaxLife(i:int):
+	$CenterContainer2/Label2/TextureProgress.max_value = i
 	
 func setLife(f:float):
 	$CenterContainer2/Label2/TextureProgress.value = f

@@ -4,14 +4,11 @@ extends Area2D
 export(int, 0, 10) var gravityIntensity = 5
 export(int, 0, 10) var jumpSpeed = 10
 export(int, 0, 10) var maxVel = 5
-export(int, 1000, 10000) var max_pollen = 5000
-export(int, 0,10) var pollen_consumption = 5
 
 onready var vel = Vector2()
-onready var pollen = max_pollen
 
+signal pollen_consumption
 signal grab_pollen
-signal pollen_changed
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,18 +19,13 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_select"):
 		vel.y -= jumpSpeed
 		vel.y = clamp(vel.y,-maxVel,maxVel)
-		pollen -= pollen_consumption
-		set_pollen(pollen)
+		emit_signal("pollen_consumption")
 	vel.y += gravityIntensity * delta
 	position += vel
 	
 	if position.y < 0:
 		position.y = 0
 		vel.y = 0
-	
-func set_pollen(pollen):
-	self.pollen = pollen
-	emit_signal("pollen_changed", pollen)
 	
 func _on_Nabeille_area_entered(area):
 	if area is Pollen:
