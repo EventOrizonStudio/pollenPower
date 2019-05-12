@@ -8,8 +8,8 @@ extends Node
 func _ready():
 	pass # Replace with function body.
 
-func setPoint(i:int):
-	$CenterContainer2/Label2.text = str(i)
+func setScore(i:int):
+	$CenterContainer2/Label2.text = "%06d" % i
 
 func setMaxLife(i:int):
 	$CenterContainer2/Label2/TextureProgress.max_value = i
@@ -18,10 +18,10 @@ func setLife(f:float):
 	$CenterContainer2/Label2/TextureProgress.value = f
 	
 func setText(s:String):
-	$Label.text = s
+	$CenterContainer/Label.text = s
 	
 func setTextVisible(b:bool):
-	$Label.visible = b
+	$CenterContainer/Label.visible = b
 	
 func startTimer():
 	$Timer.start()

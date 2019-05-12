@@ -3,11 +3,12 @@
 [ext_resource path="res://Script/Pollen.gd" type="Script" id=1]
 [ext_resource path="res://Assets/pollen.png" type="Texture" id=2]
 
-
 [sub_resource type="CircleShape2D" id=1]
 radius = 6.62971
 
-[node name="Pollen" type="Area2D"]
+[node name="Pollen" type="Area2D" groups=[
+"Pollen",
+]]
 script = ExtResource( 1 )
 velX = 150
 

@@ -20,6 +20,7 @@ margin_right = 830.0
 margin_bottom = 312.0
 custom_fonts/font = ExtResource( 2 )
 text = "Appuyer sur espace pour commencer"
+align = 1
 script = ExtResource( 3 )
 
 [node name="Timer" type="Timer" parent="."]
@@ -47,4 +48,5 @@ margin_bottom = 116.32
 step = 0.0
 value = 53.12
 texture_progress = ExtResource( 5 )
+
 [connection signal="timeout" from="Timer" to="CenterContainer/Label" method="onTimerTimeout"]

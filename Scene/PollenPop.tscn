@@ -2,10 +2,9 @@
 
 [ext_resource path="res://Script/PollenPop.gd" type="Script" id=1]
 
-
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 1, 3, 0, 0, 0, 0, 2, 600, 0, 0, 0, 0, 0, 2 )
+"points": PoolVector2Array( 0, 0, 0, 0, 1, 28, 0, 0, 0, 0, 0, 566.701, 0, 0, 0, 0, 0, 2 )
 }
 
 [node name="PollenPop" type="Node2D"]
@@ -15,8 +14,8 @@ script = ExtResource( 1 )
 curve = SubResource( 1 )
 
 [node name="PopFollow" type="PathFollow2D" parent="PopPath"]
-position = Vector2( 1, 3 )
-rotation = 1.56912
+position = Vector2( 1, 28 )
+rotation = 1.57265
 
 [node name="PopTimer" type="Timer" parent="."]
 wait_time = 3.0
