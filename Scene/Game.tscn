@@ -9,6 +9,7 @@
 
 [node name="Nabeille" type="Area2D" parent="."]
 script = ExtResource( 1 )
+gravityIntensity = 7
 
 [node name="Sprite" type="Sprite" parent="Nabeille"]
 texture = ExtResource( 2 )
