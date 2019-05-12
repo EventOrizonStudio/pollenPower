@@ -5,6 +5,7 @@ export(int, 0, 10) var gravityIntensity = 5
 export(int, 0, 10) var jumpSpeed = 10
 export(int, 0, 10) var maxVel = 5
 export(int, 1000, 10000) var max_pollen = 5000
+export(int, 0,10) var pollen_consumption = 5
 
 onready var vel = Vector2()
 onready var pollen = max_pollen
@@ -21,6 +22,8 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_select"):
 		vel.y -= jumpSpeed
 		vel.y = clamp(vel.y,-maxVel,maxVel)
+		pollen -= pollen_consumption
+		set_pollen(pollen)
 	vel.y += gravityIntensity * delta
 	position += vel
 	
