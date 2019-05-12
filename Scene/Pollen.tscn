@@ -8,7 +8,6 @@ radius = 6.62971
 
 [node name="Pollen" type="Area2D"]
 script = ExtResource( 1 )
-velX = 150
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
